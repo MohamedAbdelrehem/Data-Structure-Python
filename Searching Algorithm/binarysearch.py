@@ -1,11 +1,9 @@
-import math
-
 def bs_itr(A, n, key):
     low = 0
     high = n - 1
 
     while low <= high:
-        mid = math.floor((low + high)/2)
+        mid = (low + high)//2
 
         if key == A[mid]:
             return mid
@@ -29,7 +27,7 @@ def bs_recur(A, key, low = 0, high = len(A) - 1):
     if low > high:
         return "Not Found"
     else:
-        mid = math.floor((low + high)/2)
+        mid = (low + high)//2
 
         if key == A[mid]:
             return mid
